@@ -30,8 +30,10 @@ func main() {
 func introDemo() {
 	primes := [6]int{2, 3, 5, 7, 11, 13}
 
+	// The type []T is a slice with elements of type T.
+	// A slice is formed by specifying two indices, a low and high bound, separated by a colon: a[low : high]
 	var s []int = primes[1:4] // select from index 1 to index 4
-	fmt.Println(s)            // [3, 5, 7]
+	fmt.Println(s)            // [3 5 7]
 }
 
 func mutatingDemo() {
@@ -45,7 +47,8 @@ func mutatingDemo() {
 
 	selectedCharacters := characters[1:3]
 
-	selectedCharacters[0] = "XXX"               // we are mutating the characters array as well!
+	// Changing the elements of a slice modifies the corresponding elements of its underlying array.
+	selectedCharacters[0] = "XXX"
 	fmt.Println(selectedCharacters, characters) // [XXX C] [A XXX C D]
 }
 
