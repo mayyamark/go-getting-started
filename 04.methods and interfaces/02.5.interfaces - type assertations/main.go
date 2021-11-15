@@ -23,6 +23,6 @@ func main() {
 	f, ok := i.(float64)
 	fmt.Println(f, ok)
 
-	f = i.(float64) // panic
-	fmt.Println(f)
+	// f = i.(float64) // panic
+	// fmt.Println(f)
 }
